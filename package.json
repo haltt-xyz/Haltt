@@ -16,11 +16,11 @@
     "framer-motion": "^12.23.22",
     "lucide-react": "^0.545.0",
     "qr-code-styling": "^1.9.2",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-firebase-hooks": "^5.1.1",
     "react-router-dom": "^7.9.4",
-    "react-scripts": "^0.0.0",
+    "react-scripts": "5.0.1",
     "react-turnstile": "^1.1.4",
     "web-vitals": "^2.1.4"
   },
@@ -29,6 +29,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "engines": {
+    "node": "18.x"
   },
   "eslintConfig": {
     "extends": [
