@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(21, 94, 117, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(21, 94, 117, 0.5);
+}
+
+/* Tab Transition Animations - Professional & Sophisticated */
+@keyframes professionalEntry {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateZ(0);
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes smoothReveal {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(5deg) scale(0.98);
+    filter: brightness(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) scale(1);
+    filter: brightness(1);
+  }
+}
+
+.tab-transition {
+  animation: professionalEntry 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+  will-change: transform, opacity, filter;
+}
+
+.tab-fade {
+  animation: smoothReveal 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center top;
+  will-change: transform, opacity, filter;
+}
+
+/* Premium Typography System */
+.premium-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  font-feature-settings: 'ss01', 'ss02', 'cv11';
+}
+
+.premium-subheading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.premium-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.011em;
+  line-height: 1.6;
+}
+
+.premium-mono {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.premium-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* Cursor Pointer for Interactive Elements */
+button,
+a,
+[role="button"],
+[onclick],
+.cursor-pointer,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+select,
+label[for],
+summary,
+div[onclick],
+.hover\:bg-gray-800,
+.hover\:bg-cyan-600\/30,
+.hover\:bg-cyan-900\/20,
+.hover\:bg-red-900\/20,
+.hover\:text-cyan-300,
+.hover\:text-red-300,
+.group {
+  cursor: pointer !important;
+}
+
+/* Modal Animations - Smooth Transitions */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Responsive Utilities */
+@media (max-width: 640px) {
+  .premium-heading {
+    letter-spacing: -0.02em;
+  }
+  
+  .premium-subheading {
+    letter-spacing: -0.015em;
+  }
+}
